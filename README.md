@@ -158,7 +158,7 @@ service xinetd restart
 ```
 ##
 #access GUI NagiosXI
-- Step 11: add custom service in GUI
+- Step 11: open the browser
 ```bash
 10.10.10.222/nagiosxi/includes/components/ccm/?cmd=view&type=service)
 ```
@@ -171,17 +171,16 @@ Description		: HTTP3 indirect host C
 
 Check command	: indirect_http
 
-Command view	: $USER1$/check_nrpe -H $HOSTADDRESS$ -c check_remote
 
-
-
-- Step 12: before save config in GUI, make Sure the command its run
-
+- Step 12: make sure the command fix run
+  
 choose 'Run Check Command'
 
-
 the output will like this : 
+
+
 [nagios@localdomain ~]$ /usr/local/nagios/libexec/check_nrpe -H 10.10.10.100 -c check_remote3
+
 HTTP OK: HTTP/1.1 200 OK - 854 bytes in 0.003 second response time |time=0.002670s;;;0.000000 size=854B;;;0
 
 - Step 13: Apply Configuration.
